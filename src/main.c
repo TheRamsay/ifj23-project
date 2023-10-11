@@ -8,7 +8,8 @@ int main(int argc, char ** argv){
     char message[64];
     printf(print_message(message));
     sym_set_name(&s, "hello");
-    printf("%s\n", s.name);
+    sym_set_type(&s, sym_t_int);
+    printf("%s, %d\n", s.name, (int)s.type);
     sym_deinit(&s);
     return 0;
 }
